@@ -1,0 +1,27 @@
+﻿<Window x:Class="KlientFTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KlientFTP"
+        mc:Ignorable="d"
+        Title="Klient FTP" Height="450" Width="666">
+    <Grid Margin="0,0,0,-16">
+        <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Margin="166,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="291,51,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="418,20,0,0" VerticalAlignment="Top" Width="100" Click="btnConnect_Click" Height="49"/>
+        <Button x:Name="btnDisconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="523,20,0,0" VerticalAlignment="Top" Width="100" Click="btnDisconnect_Click" Height="49"/>
+        <Button x:Name="btnDownload" Content="Download" HorizontalAlignment="Left" Margin="484,346,0,0" VerticalAlignment="Top" Width="67" Click="btnDownload_Click"/>
+        <Button x:Name="btnUpload" Content="Upload" HorizontalAlignment="Left" Margin="556,346,0,0" VerticalAlignment="Top" Width="67" Click="btnUpload_Click"/>
+        <TextBox x:Name="txtLocalPath" HorizontalAlignment="Left" Margin="41,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="551"/>
+        <Button x:Name="btnBrowse" Content="..." HorizontalAlignment="Left" Margin="597,371,0,0" VerticalAlignment="Top" Height="18" Width="26" Click="btnBrowse_Click"/>
+        <ListBox x:Name="lbFtpDir" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="41,123,43,107" MouseDoubleClick="lbFtpDir_MouseDoubleClick"/>
+        <TextBox x:Name="txtFtpPath" HorizontalAlignment="Left" Margin="41,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="582"/>
+        <TextBox x:Name="txtSerwer" HorizontalAlignment="Left" Margin="41,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Server:" HorizontalAlignment="Left" Margin="41,20,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Login:" HorizontalAlignment="Left" Margin="166,20,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="291,20,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Server path:" HorizontalAlignment="Left" Margin="41,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Local path:" HorizontalAlignment="Left" Margin="41,340,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
